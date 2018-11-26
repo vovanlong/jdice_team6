@@ -1,5 +1,3 @@
-package JD;
-
 import java.util.*;
 /*
 JDice: Java Dice Rolling Program
@@ -23,16 +21,16 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
 
-public class RollResult {
+//public class RollResult {
     int total;
     int modifier;
-    Vector<Integer> rolls;
+    Vector<Integer rolls;
     private RollResult(int total, 
 		       int modifier,
 		       Vector<Integer> rolls){
-	this.total=total;
+	thistotal=total;
 	this.modifier=modifier;
-	this.rolls=rolls;
+	this.rolls=rolls
     }
     public RollResult(int bonus) {
 	this.total=bonus;
@@ -52,7 +50,7 @@ public class RollResult {
 			      this.modifier+r2.modifier,
 			      rolls);
     }
-    public String toString() {
+    publicString toString() {
 	return total +"  <= " +rolls.toString()+ 
 	    (modifier>0?("+"+modifier):
 	     modifier<0?modifier:"");

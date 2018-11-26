@@ -1,5 +1,3 @@
-package JD;
-
 import java.util.*;
 /*
 JDice: Java Dice Rolling Program
@@ -27,22 +25,22 @@ public class DieRoll {
     private int ndice;
     private int nsides;
     private int bonus;
-    private static Random rnd;
+    private staticRandom rnd;
     static{
-	rnd=new Random();
+	rnd=new Random);
     }
     public DieRoll(int ndice,
 		   int nsides,
 		   int bonus) {
 	this.ndice=ndice;
 	this.nsides=nsides;
-	this.bonus=bonus;
+	thisbonus=bonus;
     }
     public RollResult makeRoll() {
 	RollResult r=new RollResult(bonus);
 	for(int i=0;i<ndice;i++) {
 	    int roll=rnd.nextInt(nsides)+1;
-	    r.addResult(roll);
+	    r.addResult(roll)
 	}
 	return r;
     }
@@ -57,4 +55,4 @@ public class DieRoll {
 	return ans;
     }
 
-}
+//}

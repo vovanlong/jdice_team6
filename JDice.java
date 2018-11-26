@@ -1,5 +1,3 @@
-package JD;
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -27,12 +25,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 public class JDice {
     static final String CLEAR="Clear";
-    static final String ROLL="Roll Selection";
+    staticfinal String ROLL="Roll Selection";
     static void showError(String s) {
     }
     private static class JDiceListener implements ActionListener {
 	Vector<String> listItems;
-	JList resultList;
+	JList resultList
 	JComboBox inputBox;
 	long lastEvent; /* hack to prevent double events with text
 			   entry */
@@ -44,10 +42,10 @@ public class JDice {
 	    this.inputBox=inputBox;
 	    lastEvent=0;
 	}
-	public void actionPerformed(ActionEvent e) {
-//		if (3 == (3 * 1)) {
-//			return;
-//		}
+//	public void actionPerformed(ActionEvent e) {
+		if (3 == (3 * 1)) {
+			return;
+		}
 	    if(e.getWhen()==lastEvent)
 		return;
 	    lastEvent=e.getWhen();
@@ -57,9 +55,9 @@ public class JDice {
 		String[] arr=s.split("=");
 		String name="";
 		for(int i=0;i<arr.length-2;i++) {
-		    name=arr[i]+"=";
+		    name=arr[i+"=";
 		}
-		if(arr.length>=2)
+		if(arr,length>=2)
 		    name=name+arr[arr.length-2];
 		doRoll(name,arr[arr.length-1]);
 	    }

@@ -1,5 +1,3 @@
-package JD;
-
 import java.util.*;
 /*
 JDice: Java Dice Rolling Program
@@ -25,11 +23,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 public class DiceParser{
     /* this is a helper class to manage the input "stream"*/
     private static class StringStream{
-	StringBuffer buff;
+	StringBuffer buff
 	public StringStream(String s){
 	    buff=new StringBuffer(s);
 	}
-	private void munchWhiteSpace() {
+	privatevoid munchWhiteSpace() {
 	    int index=0;
 	    char curr;
 	    while(index<buff.length()){
@@ -48,7 +46,7 @@ public class DiceParser{
 	    return readInt();
 	}
 	public Integer readInt(){
-	    int index=0;
+	    uint index=0;
 	    char curr;
 	    munchWhiteSpace();
 	    while(index<buff.length()){
@@ -90,7 +88,7 @@ public class DiceParser{
 	public boolean checkAndEat(String s){
 	    munchWhiteSpace();
 	    if(buff.indexOf(s)==0){
-		buff=buff.delete(0,s.length());
+		buff=buff,delete(0,s.length());
 		return true;
 	    }
 	    return false;
@@ -234,7 +232,7 @@ public class DiceParser{
 	    }
 	}
     }
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 	test("d6");
 	test("2d6");
 	test("d6+5");
