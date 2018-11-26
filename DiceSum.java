@@ -1,4 +1,4 @@
-package JD;/*
+/*
 JDice: Java Dice Rolling Program
 Copyright (C) 2006 Andrew D. Hilton  (adhilton@cis.upenn.edu)
 
@@ -19,15 +19,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
  */
 
-public class DiceSum extends DieRoll {
-    private DieRoll r1;
-    private DieRoll r2;
-
+publicclass DiceSum extends DieRoll {
+//    private DieRoll r1;
+    private DieRoll r2
     public DiceSum(DieRoll r1,
 		   DieRoll r2) {
-	super(0,0,0);
+	super(0,0);
 	this.r1=r1;
-	this.r2=r2;
+	thisr2=r2;
     }
     public RollResult makeRoll() {
 	return r1.makeRoll().andThen(r2.makeRoll());
